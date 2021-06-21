@@ -41,54 +41,48 @@
         }
         function pop_Elecciones2davuelta_0(feature, layer) {
             var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">Departamento:</th>\
-                        <td>' + (feature.properties['NOMBDEP'] !== null ? autolinker.link(feature.properties['NOMBDEP'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Provincia:</th>\
-                        <td>' + (feature.properties['NOMBPROV'] !== null ? autolinker.link(feature.properties['NOMBPROV'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Distrito:</th>\
-                        <td>' + (feature.properties['NOMBDIST'] !== null ? autolinker.link(feature.properties['NOMBDIST'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Perú Libre (2da vuelta):</th>\
-                        <td>' + (feature.properties['CASTILLO'] !== null ? autolinker.link(feature.properties['CASTILLO'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Fuerza Popular (2da vuelta):</th>\
-                        <td>' + (feature.properties['FUJIMORI'] !== null ? autolinker.link(feature.properties['FUJIMORI'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Electores Hábiles</th>\
-                        <td>' + (feature.properties['ELECTORES'] !== null ? autolinker.link(feature.properties['ELECTORES'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Fuerza Popular (1ra vuelta):</th>\
-                        <td>' + (feature.properties['VOTOS_P11'] !== null ? autolinker.link(feature.properties['VOTOS_P11'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Perú Libre (1ra vuelta):</th>\
-                        <td>' + (feature.properties['VOTOS_P16'] !== null ? autolinker.link(feature.properties['VOTOS_P16'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">%Válidos CASTILLO 2V</th>\
-                        <td>' + (feature.properties['CASVAL2V'] !== null ? autolinker.link(feature.properties['CASVAL2V'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">%Válidos FUJIMORI 2V</th>\
-                        <td>' + (feature.properties['FUJVAL2V'] !== null ? autolinker.link(feature.properties['FUJVAL2V'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">%Válidos CASTILLO 1V</th>\
-                        <td>' + (feature.properties['CASVALI1V'] !== null ? autolinker.link(feature.properties['CASVALI1V'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">%Válidos FUJIMORI 1V</th>\
-                        <td>' + (feature.properties['FUJVAL1V'] !== null ? autolinker.link(feature.properties['FUJVAL1V'].toLocaleString()) : '') + '</td>\
-                    </tr>\
+                                      <tr>\
+      <td>&nbsp;</td>\
+    <td style="background-color: #C4C3C3" colspan="2"><center><b><FONT COLOR="black"> 1ra Vuelta </FONT></b></center></td>\
+    <td style="background-color: #C4C3C3" colspan="2"><center><b><FONT COLOR="black"> 2da Vuelta </FONT></b></center></td>\
+  </tr>\
+  <tr>\
+    <td>&nbsp;</td>\
+    <td style="background-color: #C4C3C3"><center><b><FONT COLOR="black">Votos</FONT></b></center></td>\
+    <td style="background-color: #C4C3C3"><center><b><FONT COLOR="black">%Válidos</FONT></b></center></td>\
+    <td style="background-color: #C4C3C3"><center><b><FONT COLOR="black">Votos</FONT></b></center></td>\
+    <td style="background-color: #C4C3C3"><center><b><FONT COLOR="black">%Válidos</FONT></b></center></td>\
+  </tr>\
+  <tr>\
+    <td style="background-color: #FADBD8" width="100"><b>Pedro Castillo</b></td>\
+    <td style="background-color: #FADBD8"><center>' + (feature.properties['VOTOS_P16'] !== null ? autolinker.link(feature.properties['VOTOS_P16'].toLocaleString()) : '') + '</center></td>\
+    <td style="background-color: #FADBD8"><center><b>' + (feature.properties['CASVALI1V'] !== null ? autolinker.link(feature.properties['CASVALI1V'].toLocaleString()) : '') + '</b></center></td>\
+    <td style="background-color: #FADBD8"><center>' + (feature.properties['CASTILLO'] !== null ? autolinker.link(feature.properties['CASTILLO'].toLocaleString()) : '') + '</center></td>\
+    <td style="background-color: #FADBD8"><center><b>' + (feature.properties['CASVAL2V'] !== null ? autolinker.link(feature.properties['CASVAL2V'].toLocaleString()) : '') + '</b></center></td>\
+  </tr>\
+  <tr>\
+    <td style="background-color: #F6DDCC" width="100"><b>Keiko Fujimori</b></td>\
+    <td style="background-color: #F6DDCC"><center>' + (feature.properties['VOTOS_P11'] !== null ? autolinker.link(feature.properties['VOTOS_P11'].toLocaleString()) : '') + '</center></td>\
+    <td style="background-color: #F6DDCC"><center><b>' + (feature.properties['FUJVAL1V'] !== null ? autolinker.link(feature.properties['FUJVAL1V'].toLocaleString()) : '') + '</b></center></td>\
+    <td style="background-color: #F6DDCC"><center>' + (feature.properties['FUJIMORI'] !== null ? autolinker.link(feature.properties['FUJIMORI'].toLocaleString()) : '') + '</center></center></td>\
+    <td style="background-color: #F6DDCC"><center><b>' + (feature.properties['FUJVAL2V'] !== null ? autolinker.link(feature.properties['FUJVAL2V'].toLocaleString()) : '') + '</b></center></td>\
+  </tr>\
+  <tr>\
+     <td height="10">Electores hábiles:</td>\
+     <td colspan="4">' + (feature.properties['ELECTORES'] !== null ? autolinker.link(feature.properties['ELECTORES'].toLocaleString()) : '') + '</td>\
+  </tr>\
+  <tr>\
+    <td height="10">Departamento:</td>\
+    <td colspan="4">' + (feature.properties['NOMBDEP'] !== null ? autolinker.link(feature.properties['NOMBDEP'].toLocaleString()) : '') + '</td>\
+  </tr>\
+  <tr>\
+    <td height="10">Provincia:</td>\
+    <td colspan="4">' + (feature.properties['NOMBPROV'] !== null ? autolinker.link(feature.properties['NOMBPROV'].toLocaleString()) : '') + '</td>\
+  </tr>\
+  <tr>\
+    <td height="10">Distrito:</td>\
+    <td colspan="4">' + (feature.properties['NOMBDIST'] !== null ? autolinker.link(feature.properties['NOMBDIST'].toLocaleString()) : '') + '</td>\
+  </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
